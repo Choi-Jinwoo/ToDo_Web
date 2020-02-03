@@ -155,8 +155,10 @@ export default {
           menu_idx: this.currentMenu
         }
       })
-        .then(() => {
-          window.location.href = "./";
+        .then(resp => {
+          const { list } = resp.data.data;
+          this.lists.push(list);
+          return;
         })
         .catch(err => {
           const { status } = err.response;
