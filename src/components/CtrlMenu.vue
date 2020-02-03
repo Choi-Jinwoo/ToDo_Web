@@ -53,6 +53,11 @@ export default {
     };
   },
   mounted() {
+    if (!localStorage.getItem("x-access-token")) {
+      this.$router.push("/login");
+      return;
+    }
+
     axios
       .get(`${SERVER_ADDR}/v1/menu`, {
         headers: {
