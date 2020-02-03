@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    hello
-    <router-view></router-view>
+    <router-view v-on:click="moveToLogin()">메인페이지</router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  methods: {
+    moveToLogin: function() {
+      this.$router.push("/main");
+    }
+  }
 };
 </script>
 

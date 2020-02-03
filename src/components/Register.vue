@@ -10,7 +10,7 @@
       <button id="button" v-on:click="register">가입완료</button>
 
       <br />
-      <a href="/login">로그인</a>
+      <a v-on:click="moveToLogin()">로그인</a>
     </div>
   </div>
 </template>
@@ -24,6 +24,9 @@ const { SERVER_ADDR } = config;
 
 export default {
   methods: {
+    moveToLogin: function() {
+      this.$router.push("/login");
+    },
     register: async function() {
       const idEle = document.getElementById("id");
       const pwEle = document.getElementById("pw");

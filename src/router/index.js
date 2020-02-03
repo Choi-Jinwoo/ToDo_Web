@@ -15,7 +15,7 @@ export const router = new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '',
       component: Main,
     },
     {
@@ -29,6 +29,10 @@ export const router = new VueRouter({
     {
       path: '/menu',
       component: CtrlMenu,
+    },
+    {
+      path: '*',
+      component: Main,
     }
   ]
 });

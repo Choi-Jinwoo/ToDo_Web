@@ -266,6 +266,7 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
+  left: 0;
   background-color: #0d0d0d;
   padding-top: 0.6%;
   padding-bottom: 0.6%;
