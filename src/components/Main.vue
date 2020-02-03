@@ -138,7 +138,7 @@ export default {
     },
     createList: function() {
       const ctx = document.getElementById("input_list").value;
-
+      document.getElementById("input_list").value = '';
       if (ctx.trim().length === 0) {
         alert("내용을 확인해주세요!");
         return;

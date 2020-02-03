@@ -34,7 +34,7 @@ export default {
       const nameEle = document.getElementById("name");
 
       const id = idEle.value;
-      const pw = pwEle.value;
+      let pw = pwEle.value;
       const pwCheck = pw_checkEle.value;
       const name = nameEle.value;
 
@@ -63,10 +63,11 @@ export default {
         return;
       }
 
+      pw = sha512(pw);
       axios
         .post(`${SERVER_ADDR}/v1/auth/register`, {
           id,
-          pw: sha512(pw),
+          pw,
           name
         })
         .then(() => {
