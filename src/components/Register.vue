@@ -66,7 +66,7 @@ export default {
       axios
         .post(`${SERVER_ADDR}/v1/auth/register`, {
           id,
-          pw,
+          pw: sha512(pw),
           name
         })
         .then(() => {
