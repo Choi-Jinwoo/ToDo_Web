@@ -71,7 +71,7 @@ export default {
   },
   mounted() {
     if (!localStorage.getItem("x-access-token")) {
-      this.$router.push("/");
+      this.$router.push("/login");
       return;
     }
 
