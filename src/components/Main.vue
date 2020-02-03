@@ -70,6 +70,11 @@ export default {
     };
   },
   mounted() {
+    if (!localStorage.getItem("x-access-token")) {
+      this.$router.push("/");
+      return;
+    }
+
     axios({
       url: `${SERVER_ADDR}/v1/menu`,
       method: "get",

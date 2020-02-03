@@ -34,12 +34,29 @@ export default {
       const nameEle = document.getElementById("name");
 
       const id = idEle.value;
-      const pw = sha512(pwEle.value);
-      const pwCheck = sha512(pw_checkEle.value);
+      const pw = pwEle.value;
+      const pwCheck = pw_checkEle.value;
       const name = nameEle.value;
 
+      // 비밀번호 확인
       if (pw !== pwCheck) {
         this.$dialogs.alert("비밀번호가 일치하지 않습니다!", {
+          title: "회원가입 실패",
+          size: "sm"
+        });
+        return;
+      }
+
+      if (id.length < 8) {
+        this.$dialogs.alert("아이디는 8자 이상 입력해주세요!", {
+          title: "회원가입 실패",
+          size: "sm"
+        });
+        return;
+      }
+
+      if (pw.length < 8) {
+        this.$dialogs.alert("비밀번호는 8자 이상 입력해주세요!", {
           title: "회원가입 실패",
           size: "sm"
         });
