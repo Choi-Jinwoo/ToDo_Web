@@ -1,21 +1,21 @@
-# todo_web
+# TO DO
 
-> todo site
+## 기술 스택
+- Vue.js
+- AWS S3
 
-## Build Setup
+## 기능
+[사용하기](http://wlswoo.com)
 
-``` bash
-# install dependencies
-npm install
+### ✔ 로그인
+![주석 2020-02-03 192746](https://user-images.githubusercontent.com/49791336/73645862-7b51ab80-46bb-11ea-950f-7772855207b0.png)
 
-# serve with hot reload at localhost:8080
-npm run dev
+### ✔ TODO 관리
+![주석 2020-02-03 192804](https://user-images.githubusercontent.com/49791336/73645964-c23fa100-46bb-11ea-8c9e-883a9b12ebad.png)
 
-# build for production with minification
-npm run build
+### ✔ 메뉴 관리
+![주석 2020-02-03 192827](https://user-images.githubusercontent.com/49791336/73645873-81478c80-46bb-11ea-8345-cd01b14738f4.png)
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# 그 외
+- [과정 글 `TODO 기획부터 배포까지`](https://velog.io/@chlwlsdn0828/series/TODO-%EA%B8%B0%ED%9A%8D%EC%97%90%EC%84%9C-%EB%B0%B0%ED%8F%AC)
+- [Todo_Server github](https://github.com/Choi-Jinwoo/ToDo_Server)
