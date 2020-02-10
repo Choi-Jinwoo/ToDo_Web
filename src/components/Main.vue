@@ -33,9 +33,9 @@
         v-for="(list) in lists"
         v-bind:key="list.idx"
         :style="{
-        'text-decoration-line':  !isEditMode && list.isChecked ? 'line-through' : 'none',
-        'color': isEditMode ? deleteList.indexOf(list) !== -1 ? '#ff0000' : '#00ff00' : list.isChecked ? '#808080' : '#ffffff'}"
-        v-on:click="list.isChecked ? uncheckList(list) : checkList(list)"
+        'text-decoration-line':  !isEditMode && list.is_checked ? 'line-through' : 'none',
+        'color': isEditMode ? deleteList.indexOf(list) !== -1 ? '#ff0000' : '#00ff00' : list.is_checked ? '#808080' : '#ffffff'}"
+        v-on:click="list.is_checked ? uncheckList(list) : checkList(list)"
       >
         <h3>{{ list.content }}</h3>
       </li>
@@ -214,7 +214,7 @@ export default {
           }
         })
         .then(() => {
-          list.isChecked = true;
+          list.is_checked = true;
         })
         .catch(err => {
           alert(err);
@@ -238,7 +238,7 @@ export default {
           }
         })
         .then(() => {
-          list.isChecked = false;
+          list.is_checked = false;
         })
         .catch(err => {
           alert(err);
